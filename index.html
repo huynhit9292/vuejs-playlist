@@ -7,12 +7,11 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>{{ greet('afternoon') }}</h1>
-      <p>{{ name }}</p>
-      <p>{{ job }}</p>
-      <a v-bind:href='website'>The next ninja</a>
-      <input type="text" v-bind:value="job" />
-      <p v-html="tag"></p>
+      <h1>Event</h1>
+      <button @click="add">Add a year</button>
+      <button @click="subtract">Subtract a year</button>
+      <p>My age is {{age}}</p>
+      <div id="canvas" @mousemove="updateXY">{{x}}, {{y}}</div>
     </div>
     <script src="app.js"></script>
   </body>
